@@ -1,0 +1,18 @@
+<!-- we are missing our boiler plate -->
+<!-- include header templete -->
+<%- include ('partial/header.ejs') %> 
+<h1>Our Post Page</h1>
+<!-- by using for loop -->
+<!-- just take care where we want percent sign and where we want html -->
+<% for (var i=0;i<posts.length;i++){%>
+    <li><%= posts[i].title %> = <%= posts[i].author %> </li>
+<% } %> 
+
+<!-- by using for each loop -->
+<% posts.forEach(function(post){ %>
+    <li>
+        <%= post.title %> - <strong><%= post.author %></strong> 
+    </li>
+<% }) %> 
+<!-- include footer template -->
+<%- include('partial/footer') %> 

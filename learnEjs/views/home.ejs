@@ -1,0 +1,18 @@
+<!-- in this way we can also add style in our ejs but we do it sepreately -->
+<!-- <style>
+    body{
+        color: rgb(21, 190, 212);
+    }
+ </style> -->
+ <!-- now we declare our stylesheet in different file -->
+ <!-- we are writing only app.css rather than public/app.css bcz we link our main app.js file and tell it
+to take refrences from the file public -->
+<!-- <link rel="stylesheet" href="/app.css"> -->
+<!-- for including partials in our ejs we use -->
+<%- include('partial/header') %> 
+<h1>Welcome to the home page</h1>
+
+<p>
+    chaliye shuru karte hai
+</p>
+<%- include('partial/footer') %> 

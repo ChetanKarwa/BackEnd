@@ -1,0 +1,25 @@
+<%- include("partials/header"); %> 
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= blog.title %> </div>
+    <div class="ui top attached">
+        <div class="item">
+            <img class="ui centered rounded image"src="<%= blog.image %> ">
+        </div>
+        <div class="content">
+            <!-- todatestring is used so that it will show in a nice format -->
+            <span><%= blog.created.toDateString() %> </span>
+        </div>
+        <div class="description">
+            <!-- minus sign is used so that it will not only act as text but act as a code of html and then
+            execute it so that if anything is bold then it gets bold by using strong tag in text -->
+            <p><%- blog.body %></p>
+        </div>
+        <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">Edit Post</a>
+        <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+            <button class="ui red basic button">Delete</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer"); %> 

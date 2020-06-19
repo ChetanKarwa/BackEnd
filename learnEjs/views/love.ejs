@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/app.css"> 
+<!-- this percent sign is use to take variable from the javascript  -->
+<!-- we use ejs file instead of html file bcz we want some data from js to come back -->
+<!-- we dont want our plain html file to run -->
+<!-- after we write percent everything inside it act as regular javascript -->
+    <h1>Hello freinds how are <%= thingvar.toUpperCase() %></h1>
+    <!-- there are two tag one with percent equal and one only percent  -->
+    <!-- percent equal is used when we wnt to return that js and stick to html -->
+    <!-- however only percent is equal when we want to just use the logic and dont want to execute it -->
+    <% if(thingvar.toLowerCase() === "harsh"){ %>
+        <p>By the way good choice</p>  
+    <% } %>
+

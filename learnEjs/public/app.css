@@ -1,0 +1,5 @@
+/* in this we will declare our styling and link it to our ejs file */
+body{
+    background-color: purple;
+    color: white;
+}

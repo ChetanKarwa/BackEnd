@@ -1,0 +1,14 @@
+<h1>Freinds List Goes Here!!</h1>
+
+<% freinds.forEach(function(freind){ %>
+    <li><%= freind %> </li>
+<% }) %> 
+<!-- in this form we provide it with action so that when button is clicked it goes to post request -->
+<!-- form is used to send the post request -->
+<form action="/addFreind" method="POST" >
+    <!-- name is a key which stores the value of text in it so that we can pass it to our javascript-->
+    <!-- body parser is a module which will help us interecting with js by creating external object of
+    req.body which contain all info of our text -->
+    <input type="text" name="newfreind" placeholder="name">
+    <button>I made a new freind</button>
+</form>
